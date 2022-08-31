@@ -1,0 +1,49 @@
+###############
+
+Hey Aaditya this is written on 23-7-2022. Saturday.
+
+You made this file to write the idea of this project and what to add to make it better.
+
+This is my first project in java.
+
+The core Idea is to make a Matrix calculator such that the whole course of 12^th standard is covered.
+
+--> Main problem:-
+           ? to make an application with GUI that covers the entire syllabus of std 12.
+           ? use the concepts od OOP to wrap around the problem.
+           ?
+           ? make it easy and fast.
+
+--> Course to be Covered:-
+           ? Matrix <<<///
+           ? Matrix Operations
+           ? Determinant of Matrix
+           ? Inverse of Matrix using Matrix Operation
+           ? Inverse of Matrix Using Adjoint of Matrix
+
+--> Current Status:-
+           ? Class Matrix() provides functionality to make a 3x3 matrix and print it or make its transpose.
+           ? Class InverseMatrix() extends Matrix() and is equipped with all the logic to handle and calculate it's inverse.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+TO DO:-
+
+       #### code currently works for 3x3 matrix
+
+ >> make equalsTo() in Matrix for "Matrix matrix" and "float[][] x". <<<////
+ >> put all the matrix operations into Matrix, from InverseMatrix. <<<////
+ >> test the changes. {during testing I came across the problem of decimal in points} <<<////
+
+
+ >> Add a smooth GUI. <  // tried making a gui in javaFX using scene builder and it looks the part now I only need to add the functions.
+        I worked on GUI and it seems that this is as far as I can go without javaFX so today I copy everything and paste in a JavaFX aplication.
+        I added the GUI, but integration and commenting of the program are left.
+
+ >> add class for user defined elementary operation.
+ >> add class to calculate inverse matrix from adjoint of matrix.
+ >> add a new class to perform matrix multiplication.
+    AxB using the rules of multiplication of matrices like -1 rule etc.
+ >> Eventually make the app capable to solve matrix equation{this is going to be hard}.
+ >> A matrix transpose class is needed wich can transpose any matrix.
+ >> A class for symmetric and skew symmetric matrix to check for their symmetry and to make any matrix both.
