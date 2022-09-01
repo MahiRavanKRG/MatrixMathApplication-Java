@@ -45,7 +45,7 @@ public class MainPannelController {
 
     } // method OnClearButtonPress() ends here
 
-    public void switchToSceneAnswer(ActionEvent event){
+    public void OnCalculateButtonPress(ActionEvent event){
 
         heading.setText("Determinant is " + " ");
 

@@ -6,6 +6,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<!-- MainPannelController-->
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: BISQUE;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.matrixmathinjavaapplication.MainPannelController">
     <children>
         <TextField fx:id="a11" layoutX="14.0" layoutY="58.0" promptText="A[1][1]" text="11" />
@@ -17,7 +19,7 @@
         <TextField fx:id="a31" layoutX="14.0" layoutY="223.0" promptText="A[3][1]" text="11" />
         <TextField fx:id="a32" layoutX="225.0" layoutY="223.0" promptText="A[3][2]" text="11" />
         <TextField fx:id="a33" layoutX="436.0" layoutY="223.0" promptText="A[3][3]" text="11" />
-        <Button layoutX="122.0" layoutY="299.0" mnemonicParsing="false" onAction="#switchToSceneAnswer" prefHeight="50.0" prefWidth="83.0" text="Calculate">
+        <Button layoutX="122.0" layoutY="299.0" mnemonicParsing="false" onAction="#OnCalculateButtonPress" prefHeight="50.0" prefWidth="83.0" text="Calculate">
             <font>
                 <Font size="14.0" />
             </font>
@@ -34,7 +36,3 @@
         </Label>
     </children>
 </AnchorPane>
-
-
-
-        <!-- MainPannelController-->
