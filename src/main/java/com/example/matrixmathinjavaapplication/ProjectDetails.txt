@@ -36,11 +36,9 @@ TO DO:-
  >> test the changes. {during testing I came across the problem of decimal in points} <<<////
 
 
- >> Add a smooth GUI. <  // tried making a gui in javaFX using scene builder and it looks the part now I only need to add the functions.
-        I worked on GUI and it seems that this is as far as I can go without javaFX so today I copy everything and paste in a JavaFX aplication.
-        I added the GUI, but integration and commenting of the program are left.
-        I have finished the integration also and only commenting id left
-        also I need to a bunch of clean up.
+ >> Add a smooth GUI. <  // I have finished the integration also and only commenting id left
+                            also I need to a bunch of clean up.
+                            Testing of one question was done and it failed DeBgging goes on from tomorrow.
 
  >> add class for user defined elementary operation.
  >> add class to calculate inverse matrix from adjoint of matrix.
