@@ -43,9 +43,11 @@ public class ControllerMainPanel {
                 {Integer.parseInt(a31.getText()), Integer.parseInt(a31.getText()), Integer.parseInt(a31.getText())}
         };
 
+        double[][] controllerXResult;
+
         InverseMatrix controllerInverseMatrixObject = new InverseMatrix(controllerXMatrix);
 
-        controllerXMatrix = controllerInverseMatrixObject.main();
+        controllerXResult = controllerInverseMatrixObject.main();
 
         heading.setText("Determinant is " + controllerInverseMatrixObject.determinantOfMatrix);
 
@@ -63,15 +65,15 @@ public class ControllerMainPanel {
         }
         else
         {
-            a11.setText(String.valueOf(controllerXMatrix[0][0]));
-            a12.setText(String.valueOf(controllerXMatrix[0][1]));
-            a13.setText(String.valueOf(controllerXMatrix[0][2]));
-            a21.setText(String.valueOf(controllerXMatrix[1][0]));
-            a22.setText(String.valueOf(controllerXMatrix[1][1]));
-            a23.setText(String.valueOf(controllerXMatrix[1][2]));
-            a31.setText(String.valueOf(controllerXMatrix[2][0]));
-            a32.setText(String.valueOf(controllerXMatrix[2][1]));
-            a33.setText(String.valueOf(controllerXMatrix[2][2]));
+            a11.setText(String.valueOf(controllerXResult[0][0]));
+            a12.setText(String.valueOf(controllerXResult[0][1]));
+            a13.setText(String.valueOf(controllerXResult[0][2]));
+            a21.setText(String.valueOf(controllerXResult[1][0]));
+            a22.setText(String.valueOf(controllerXResult[1][1]));
+            a23.setText(String.valueOf(controllerXResult[1][2]));
+            a31.setText(String.valueOf(controllerXResult[2][0]));
+            a32.setText(String.valueOf(controllerXResult[2][1]));
+            a33.setText(String.valueOf(controllerXResult[2][2]));
         }
 
 
