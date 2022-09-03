@@ -3,31 +3,47 @@ package com.example.matrixmathinjavaapplication;
 import java.text.DecimalFormat;
 
 /**
- *  This class implements the Matrix class to become an application that can get a matrix from the user and make its inverse and then
- *  print again its result inverse matrix
+ *  This class implements the Matrix class to calculate and return the inverse matrix.
+ *
+ *  ## message to self though this class is not thoroughly commented I think I have made it workable.
  *
  */
 
 
 public class InverseMatrix extends Matrix {
+
+    InverseMatrix(double[][] x){
+        super.matrix = x ;
+    }
     DecimalFormat numberFormat = new DecimalFormat("#.00");
 
     double[][] inverseMatrix = new double[3][3] ;
 
-        public void main() {
+    static double[][] UNITMATRIX = {
+                                      { 0 , 0 , 0 } ,
+                                      { 0 , 0 , 0 } ,
+                                      { 0 , 0 , 0 } } ;
+
+    static double[][] ERRORMATRIX = {
+                                      { 1 , 0 , 1 } ,
+                                      { 1 , 0 , 1 } ,
+                                      { 1 , 0 , 1 } } ;
+
+        public double[][] main() {
             for (int i = 0 ; i < 3 ; i++) {
                 for (int j = 0; j < 3; j++) {
                     inverseMatrix[i][j] = ( i==j ? 1 : 0 );
                 }
             }
 
-        createMatrix();
-        printMatrix(matrix , true);
+        // createMatrix();   // This was used in command line to get the matrix.
+        // printMatrix(matrix , true); // This was used in command line to print the input matrix.
         determinantOfMatrix = getDeterminantOfMatrix(matrix);
-        System.out.println("The determinant of the given matrix is" + determinantOfMatrix);
+        // System.out.println("The determinant of the given matrix is" + determinantOfMatrix); // This was used to print  the determinant.
         if(determinantOfMatrix==0){
-            System.out.println("\nAs the determinant is zero, the inverse of this matrix is not possible.\nThis program will now terminate.");
-            System.exit(0);
+           // System.out.println("\nAs the determinant is zero, the inverse of this matrix is not possible.\nThis program will now terminate.");
+           // System.exit(0);
+            return UNITMATRIX;
         }
         // This is the logic that calculates the inverse
         if(matrix[0][0]==0 && matrix[1][0]!=0) {
@@ -76,9 +92,10 @@ public class InverseMatrix extends Matrix {
                 }
             }
 
-            if(unitMatrixChecker(matrix)) printMatrix(inverseMatrix, false);
+            if(unitMatrixChecker(matrix)) //printMatrix(inverseMatrix, false);
+                return inverseMatrix;
             else {
-                System.out.println("Error occurred");
+                return ERRORMATRIX ;
               //  printMatrix(inverseMatrix , false);
               //  printMatrix(matrix , true);
             }

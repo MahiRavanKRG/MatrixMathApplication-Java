@@ -13,6 +13,7 @@
  *      ->{constructor} Matrix(); || is used for unit matrix.
  *      ->{constructor} Matrix(true);  || boolean is just for the purpose of segregation, true\false doesn't matter.
  *                                     || this is used for user initialization of the matrix.
+ *      ->{constructor} Matrix(double[][] ); || is used to copy the inserted matrix.
  *
  *  METHODS
  *  This class has the following methods
@@ -45,6 +46,12 @@ package com.example.matrixmathinjavaapplication;
 import java.util.Scanner;
 
 public class Matrix {
+
+    Matrix(double[][] matrix) {
+        this.matrix = matrix;
+    }
+
+
     double[][] matrix = new double[3][3] ;
     double determinantOfMatrix , x = 0 ;
 

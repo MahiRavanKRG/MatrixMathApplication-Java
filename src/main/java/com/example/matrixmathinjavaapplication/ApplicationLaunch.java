@@ -1,5 +1,5 @@
 /**
- *      This is not COMMENTED
+ *      This is a simple class with only initializing the program.
  */
 
 

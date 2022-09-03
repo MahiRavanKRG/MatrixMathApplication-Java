@@ -1,0 +1,24 @@
+##########
+
+TEMPLATE
+| +/0  +/0  +/0 |
+| +/0  +/0  +/0 |
+| +/0  +/0  +/0 |
+
+This is a folder that contains test questions.
+
+QQQQQQ   1
+
+qqq
+
+| +1/0  +2/0  _1/0 |
+| +3/0  +5/0  +3/0 |
+| +2/0  +4/0  +3/0 |
+
+aaa
+
+| -3/5  +2/0  -11/5 |
+| +3/5  -1/0  +06/5 |
+| -2/5  +0/0  +01/5 |
+
+Results : tested once for this question and found errors.

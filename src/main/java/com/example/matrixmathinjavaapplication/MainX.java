@@ -10,9 +10,9 @@ public class MainX {
 
     public  void main(String[] args) {
 
-       InverseMatrix x = new InverseMatrix();
-       x.initialize();
-       x.main();
+//       InverseMatrix x = new InverseMatrix();
+//       x.initialize();
+//       x.main();
 
 
 
