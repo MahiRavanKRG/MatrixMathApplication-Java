@@ -1,5 +1,12 @@
 /**
- *      created double . don't just do random bull shit on git.
+ *      This class is the controller that contains the methods of our application.
+ *
+ * METHODS
+ *   This class has the following methods
+ *       -> void OnClearButtonPress(ActionEvent event); || This is the method of Clear button.
+ *              || This method is used to remove inputs from the application.
+ *       -> void OnCalculateButtonPress(ActionEvent event); || This is the method of Calculate button.
+ *              || This method is used to calculate and put the answer on the screen.
  */
 
 package com.example.matrixmathinjavaapplication;
@@ -34,7 +41,7 @@ public class ControllerMainPanel {
         a33.clear();
 
 
-    } // method OnClearButtonPress() ends here
+    } // method OnClearButtonPress() ends here.
 
     public void OnCalculateButtonPress(ActionEvent event){
 
@@ -62,20 +69,7 @@ public class ControllerMainPanel {
 
         heading.setText("Determinant is " + controllerInverseMatrixObject.determinantOfMatrix);
 
-//        if (controllerInverseMatrixObject.determinantOfMatrix==0)
-//        {
-//            a11.setText("9");
-//            a12.setText("9");
-//            a13.setText("9");
-//            a21.setText("9");
-//            a22.setText("9");
-//            a23.setText("9");
-//            a31.setText("9");
-//            a32.setText("9");
-//            a33.setText("9");
-//        }
-//        else
-//        {
+
             a11.setText(String.valueOf(controllerXResult[0][0]));
             a12.setText(String.valueOf(controllerXResult[0][1]));
             a13.setText(String.valueOf(controllerXResult[0][2]));
@@ -85,12 +79,6 @@ public class ControllerMainPanel {
             a31.setText(String.valueOf(controllerXResult[2][0]));
             a32.setText(String.valueOf(controllerXResult[2][1]));
             a33.setText(String.valueOf(controllerXResult[2][2]));
-        //}
 
-
-
-
-
-
-    }
+    } // method OnCalculateButtonPress() ends here.
 }

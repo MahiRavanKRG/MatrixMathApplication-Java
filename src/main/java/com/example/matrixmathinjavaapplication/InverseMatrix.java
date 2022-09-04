@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 /**
  *  This class implements the Matrix class to calculate and return the inverse matrix.
  *
+ *  This class has the support to carry out matrix operations
  *  ## message to self though this class is not thoroughly commented I think I have made it workable.
  *
  */
