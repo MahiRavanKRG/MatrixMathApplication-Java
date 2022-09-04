@@ -20,9 +20,9 @@ public class InverseMatrix extends Matrix {
     double[][] inverseMatrix = new double[3][3] ;
 
     static double[][] UNITMATRIX = {
-                                      { 0 , 0 , 0 } ,
-                                      { 0 , 0 , 0 } ,
-                                      { 0 , 0 , 0 } } ;
+                                      { 1 , 0 , 0 } ,
+                                      { 0 , 1 , 0 } ,
+                                      { 0 , 0 , 1 } } ;
 
     static double[][] ERRORMATRIX = {
                                       { 1 , 0 , 1 } ,
