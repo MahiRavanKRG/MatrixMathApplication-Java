@@ -8,6 +8,7 @@ package com.example.matrixmathinjavaapplication;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class ApplicationLaunch extends Application {
@@ -16,6 +17,9 @@ public class ApplicationLaunch extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainPannel.fxml"));
 
         Scene sceneX = new Scene(fxmlLoader.load());
+
+        Image logo = new Image("D:\\CODES\\Java\\MatrixMathInJavaApplication\\src\\Images\\MainLogo.png");
+        primaryStage.getIcons().add(logo);
 
         primaryStage.setTitle("ApplicationX");
         primaryStage.setScene(sceneX);
