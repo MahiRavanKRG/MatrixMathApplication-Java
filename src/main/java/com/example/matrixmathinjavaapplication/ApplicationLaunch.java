@@ -1,5 +1,6 @@
 /**
  *      This is a simple class with only initializing the program.
+ *      Also, this class adds the logo to the project.
  */
 
 

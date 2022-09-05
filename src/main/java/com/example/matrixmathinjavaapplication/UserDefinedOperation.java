@@ -1,5 +1,5 @@
 /**
- *      This is not COMMENTED
+ *      This is a work in progress.
  */
 
 package com.example.matrixmathinjavaapplication;

@@ -1,5 +1,5 @@
 /**
- *      This is not COMMENTED
+ *      This document was used to test the logic of the program without GUI using only command line interface.
  */
 
 package com.example.matrixmathinjavaapplication;
