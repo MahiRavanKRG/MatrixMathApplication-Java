@@ -15,7 +15,7 @@ The core Idea is to make a Matrix calculator such that the whole course of 12^th
            ? make it easy and fast.
 
 --> Course to be Covered:-
-           ? Matrix <<<///
+           ? Matrix <<<////
            ? Matrix Operations
            ? Determinant of Matrix
            ? Inverse of Matrix using Matrix Operation
@@ -39,6 +39,8 @@ TO DO:-
 
 
  >> add class for user defined elementary operation. < // I have reached here.
+        .
+        --> To do this I will have to first pick up all the matrix operations from CLASS InverseMatrix to CLASS Matrix.
 
  >> add class to calculate inverse matrix from adjoint of matrix.
  >> add a new class to perform matrix multiplication.
