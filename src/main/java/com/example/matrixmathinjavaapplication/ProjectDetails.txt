@@ -40,8 +40,9 @@ TO DO:-
 
  >> add class for user defined elementary operation. < // I have reached here.
         .
-        --> To do this I will have to first pick up all the matrix operations from CLASS InverseMatrix to CLASS Matrix.
+        --> Working.
 
+ >> make the GUI a bit modern
  >> add class to calculate inverse matrix from adjoint of matrix.
  >> add a new class to perform matrix multiplication.
     AxB using the rules of multiplication of matrices like -1 rule etc.

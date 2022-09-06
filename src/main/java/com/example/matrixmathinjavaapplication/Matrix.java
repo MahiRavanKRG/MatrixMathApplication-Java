@@ -27,8 +27,6 @@
  *      -> double[][] getMatrix();  || this method is used to return the three-dimensional matrix
  *      -> void setMatrix();  || this method is used to set the matrix to the given 3X3 matrix.
  *
- *      -> double[][] transpose();  || this method is used to find and return 3X3 transpose matrix.
- *
  *      -> boolean equalsTo(Matrix x); || this method is used to find if the input is equal to the current matrix.
  *      -> boolean equalsTo(double[][] x); || this method is used to find if the input is equal to the current matrix.
  *
@@ -38,6 +36,7 @@
  *      -> void rowInterchange(double[] a,double[] b); || this method is row interchange operation.
  *      -> void rowAddition(double[] a, double[] b, double x); || this method is addition operation.
  *      -> void rowMultiplication(double[] a,double x); || this method is row multiplication operation.
+ *      -> double[][] transpose();  || this method is used to find and return 3X3 transpose matrix.
  *
  */
 

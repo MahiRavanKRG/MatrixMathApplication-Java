@@ -15,9 +15,11 @@ import javafx.stage.Stage;
 public class ApplicationLaunch extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainPannel.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InverseMatrixApplication.fxml"));
 
         Scene sceneX = new Scene(fxmlLoader.load());
+
+
 
         Image logo = new Image("D:\\CODES\\Java\\MatrixMathInJavaApplication\\src\\Images\\MainLogo.png");
         primaryStage.getIcons().add(logo);
