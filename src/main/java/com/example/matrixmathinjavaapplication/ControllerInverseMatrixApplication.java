@@ -16,13 +16,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class ControllerMainPanel {
+public class ControllerInverseMatrixApplication {
 
     @FXML
     private TextField a11 , a12 , a13 , a21 , a22 , a23 , a31 , a32 , a33;
 
     @FXML
-    private Label heading;
+    private Label heading , ZeroMessagePrompt;
 
 
     public void OnClearButtonPress(ActionEvent event){
@@ -45,29 +45,28 @@ public class ControllerMainPanel {
 
     public void OnCalculateButtonPress(ActionEvent event){
 
-        double[][] controllerXMatrix = new double[][]{
-                {Double.parseDouble(a11.getText()), Double.parseDouble(a12.getText()), Double.parseDouble(a13.getText())},
-                {Double.parseDouble(a21.getText()), Double.parseDouble(a22.getText()), Double.parseDouble(a23.getText())},
-                {Double.parseDouble(a31.getText()), Double.parseDouble(a32.getText()), Double.parseDouble(a33.getText())}
-        };
+       try {
+            double[][] controllerXMatrix = new double[][]{
+                    {Double.parseDouble(a11.getText()), Double.parseDouble(a12.getText()), Double.parseDouble(a13.getText())},
+                    {Double.parseDouble(a21.getText()), Double.parseDouble(a22.getText()), Double.parseDouble(a23.getText())},
+                    {Double.parseDouble(a31.getText()), Double.parseDouble(a32.getText()), Double.parseDouble(a33.getText())}
+            };
+
 
         double[][] controllerXResult;
-
-        for (double x[] : controllerXMatrix
-             ) {
-            for (double y: x
-                 ) {
-                System.out.println("  " + y);
-
-            }
-
-        }
 
         InverseMatrix controllerInverseMatrixObject = new InverseMatrix(controllerXMatrix);
 
         controllerXResult = controllerInverseMatrixObject.main();
 
-        heading.setText("Determinant is " + controllerInverseMatrixObject.determinantOfMatrix);
+        if (controllerInverseMatrixObject.determinantOfMatrix==0) {
+            heading.setText("Determinant is " + controllerInverseMatrixObject.determinantOfMatrix);
+            ZeroMessagePrompt.setText("as the determinant is zero inverse of this matrix is not possible");
+        }
+        else {
+            heading.setText("Determinant is " + controllerInverseMatrixObject.determinantOfMatrix);
+            ZeroMessagePrompt.setText(".");
+        }
 
 
             a11.setText(String.valueOf(controllerXResult[0][0]));
@@ -79,6 +78,11 @@ public class ControllerMainPanel {
             a31.setText(String.valueOf(controllerXResult[2][0]));
             a32.setText(String.valueOf(controllerXResult[2][1]));
             a33.setText(String.valueOf(controllerXResult[2][2]));
+       } catch (Exception e){
+
+           heading.setText("Please Enter Some Value");
+
+       }
 
     } // method OnCalculateButtonPress() ends here.
 }
