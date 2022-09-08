@@ -8,7 +8,7 @@ package com.example.matrixmathinjavaapplication;
 
 public class MainX {
 
-    public  void main(String[] args) {
+    public void main(String[] args) {
 
 //       InverseMatrix x = new InverseMatrix();
 //       x.initialize();
