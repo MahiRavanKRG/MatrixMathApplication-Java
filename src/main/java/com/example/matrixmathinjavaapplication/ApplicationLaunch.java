@@ -15,10 +15,7 @@ import javafx.stage.Stage;
 public class ApplicationLaunch extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-    //    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InverseMatrixApplication.fxml"));
-        // THIS IS THE LOADER FOR INVERSEMATRIXAPPLICATION.
-
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("UDOstart.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InverseMatrixApplication.fxml"));
 
         Scene sceneX = new Scene(fxmlLoader.load());
 

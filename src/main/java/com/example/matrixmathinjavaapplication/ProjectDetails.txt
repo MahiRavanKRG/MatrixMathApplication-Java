@@ -41,7 +41,6 @@ TO DO:-
  >> add class for user defined elementary operation. < // I have reached here.
         .
         --> Working.
-        -----> To achieve this I added the stage UDOstart, and I am planning to use the functions from Matrix to acieve my goal.
 
  >> make the GUI a bit modern
  >> add class to calculate inverse matrix from adjoint of matrix.
