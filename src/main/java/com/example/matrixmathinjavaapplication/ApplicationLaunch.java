@@ -24,9 +24,6 @@ public class ApplicationLaunch extends Application {
         Image logo = new Image("D:\\CODES\\Java\\MatrixMathInJavaApplication\\src\\Images\\MainLogo.png");
         primaryStage.getIcons().add(logo);
 
-    //    sceneX.getStylesheets().add(getClass().getResource("bootstrap.css").toExternalForm());
-
-
         primaryStage.setTitle("ApplicationX");
         primaryStage.setScene(sceneX);
         primaryStage.show();
