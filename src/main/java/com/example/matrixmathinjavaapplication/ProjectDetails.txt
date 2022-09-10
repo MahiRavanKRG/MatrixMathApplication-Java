@@ -42,10 +42,10 @@ TO DO:-
         .
         --> Working.
 
-        > Tried to add a css to the project but it did not work.
+        > Tried to add a css to the project, but it did not work.
 
  >> make the GUI a bit modern
- >> add class to calculate inverse matrix from adjoint of matrix.
+ >> add class to calculate inverse matrix from adjoin of matrix.
  >> add a new class to perform matrix multiplication.
     AxB using the rules of multiplication of matrices like -1 rule etc.
  >> Eventually make the app capable to solve matrix equation{this is going to be hard}.

@@ -1,6 +1,9 @@
 /**
  *      This is a simple class with only initializing the program.
  *      Also, this class adds the logo to the project.
+ *
+ *      Here the application has only one start point and if you want
+ *       a new application then you have to change the FXMLLoader.
  */
 
 
@@ -15,7 +18,7 @@ import javafx.stage.Stage;
 public class ApplicationLaunch extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InverseMatrixApplication.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("UDOApplication.fxml"));
 
         Scene sceneX = new Scene(fxmlLoader.load());
 
@@ -24,7 +27,8 @@ public class ApplicationLaunch extends Application {
         Image logo = new Image("D:\\CODES\\Java\\MatrixMathInJavaApplication\\src\\Images\\MainLogo.png");
         primaryStage.getIcons().add(logo);
 
-        sceneX.getStylesheets().add(getClass().getResource("bootstrap.css").toExternalForm());
+        String bootstrapCSSfileAddress = getClass().getResource("bootstrap.css").toExternalForm();
+        sceneX.getStylesheets().add(bootstrapCSSfileAddress);
 
 
         primaryStage.setTitle("ApplicationX");

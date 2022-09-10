@@ -13,6 +13,7 @@ package com.example.matrixmathinjavaapplication;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -23,6 +24,9 @@ public class ControllerInverseMatrixApplication {
 
     @FXML
     private Label heading , ZeroMessagePrompt;
+
+    @FXML
+    private Button CALCULATE , CLEAR;
 
 
     public void OnClearButtonPress(ActionEvent event){
