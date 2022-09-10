@@ -42,6 +42,8 @@ TO DO:-
         .
         --> Working.
 
+        > Tried to add a css to the project but it did not work.
+
  >> make the GUI a bit modern
  >> add class to calculate inverse matrix from adjoint of matrix.
  >> add a new class to perform matrix multiplication.
