@@ -43,24 +43,24 @@
       </Label>
       <AnchorPane layoutX="10.0" layoutY="211.0" prefHeight="65.0" prefWidth="576.0" style="-fx-border-color: BLACK;">
          <children>
-            <TextField fx:id="inputRow" layoutX="37.0" layoutY="17.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
-            <Label fx:id="heading1" layoutX="8.0" layoutY="19.0" text="R">
+            <TextField fx:id="inputRow1" layoutX="37.0" layoutY="17.0" onMouseExited="#OninputRow1Leave" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
+            <Label layoutX="8.0" layoutY="19.0" text="R">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label fx:id="heading11" layoutX="122.0" layoutY="19.0" text="--&gt;">
+            <Label layoutX="122.0" layoutY="19.0" text="--&gt;">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label fx:id="heading12" layoutX="255.0" layoutY="19.0" text="x    R">
+            <Label layoutX="255.0" layoutY="19.0" text="x    R">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
             <TextField fx:id="inputVar" layoutX="184.0" layoutY="17.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
-            <TextField fx:id="InputRow" layoutX="295.0" layoutY="17.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
+            <TextField fx:id="inputRow2" layoutX="295.0" layoutY="17.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
          </children>
       </AnchorPane>
     </children>
