@@ -34,7 +34,11 @@ public class ControllerUDOApplication {
 
     public void OnCalculateButtonPress(){
         try {
-            double[][] controllerUDOMatrix = new double[][]{
+
+            if(inputRow1.getText()!=inputRow2.getText()) inputRow2.setText(inputRow1.getText()); ;
+
+
+            double[][] controllerUDOMatrixC = new double[][]{
                     {Double.parseDouble(a11.getText()), Double.parseDouble(a12.getText()), Double.parseDouble(a13.getText())},
                     {Double.parseDouble(a21.getText()), Double.parseDouble(a22.getText()), Double.parseDouble(a23.getText())},
                     {Double.parseDouble(a31.getText()), Double.parseDouble(a32.getText()), Double.parseDouble(a33.getText())}
@@ -43,7 +47,7 @@ public class ControllerUDOApplication {
             var inputMulVar = Double.parseDouble(inputVar.getText());
             var inputRowVar = Integer.parseInt(inputRow1.getText());
 
-            Matrix controllerUDOMatrixObject = new Matrix(controllerUDOMatrix);
+            Matrix controllerUDOMatrixObject = new Matrix(controllerUDOMatrixC);
 
             Exception exception = new Exception();
 
@@ -74,7 +78,7 @@ public class ControllerUDOApplication {
 
         } catch (Exception e) {
            // e.printStackTrace();
-            DeterminantPrompt.setText("Enter all the values in the text box");
+            DeterminantPrompt.setText("Enter all the values properly in all the text box");
         }
 
     }
@@ -82,15 +86,15 @@ public class ControllerUDOApplication {
 
     public void OnDeterminantButtonPress(){
         try {
-            double[][] controllerUDOMatrix = new double[][]{
+            double[][] controllerUDOMatrixD = new double[][]{
                     {Double.parseDouble(a11.getText()), Double.parseDouble(a12.getText()), Double.parseDouble(a13.getText())},
                     {Double.parseDouble(a21.getText()), Double.parseDouble(a22.getText()), Double.parseDouble(a23.getText())},
                     {Double.parseDouble(a31.getText()), Double.parseDouble(a32.getText()), Double.parseDouble(a33.getText())}
             };
 
-            Matrix controllerUDOMatrixObject = new Matrix(controllerUDOMatrix);
+            Matrix controllerUDOMatrixDObject = new Matrix(controllerUDOMatrixD);
 
-            DeterminantPrompt.setText( "The determinant of the given matrix is " + controllerUDOMatrixObject.determinantOfMatrix);
+            DeterminantPrompt.setText( "The determinant of the given matrix is " + controllerUDOMatrixDObject.determinantOfMatrix);
 
         }catch (Exception exception){
             exception.printStackTrace();
