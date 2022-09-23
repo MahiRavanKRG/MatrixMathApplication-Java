@@ -21,7 +21,7 @@
         <TextField fx:id="a31" layoutX="14.0" layoutY="146.0" promptText="A[3][1]" text="31" />
         <TextField fx:id="a32" layoutX="225.0" layoutY="146.0" promptText="A[3][2]" text="32" />
         <TextField fx:id="a33" layoutX="436.0" layoutY="146.0" promptText="A[3][3]" text="33" />
-        <Button fx:id="CALCULATE" layoutX="110.0" layoutY="299.0" mnemonicParsing="false" onAction="#OnCalculateButtonPress" prefHeight="50.0" prefWidth="106.0" text="Calculate">
+        <Button fx:id="CALCULATE" layoutX="88.0" layoutY="299.0" mnemonicParsing="false" onAction="#OnRowMultiplicationButtonPress" prefHeight="50.0" prefWidth="150.0" text="Row Multiplication">
             <font>
                 <Font size="14.0" />
             </font>

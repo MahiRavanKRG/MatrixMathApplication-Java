@@ -1,41 +1,57 @@
-package com.example.matrixmathinjavaapplication;
-
-import java.text.DecimalFormat;
 
 /**
- *  This class implements the Matrix class to calculate and return the inverse matrix.
+ *   This class implements the Matrix class to calculate and return the inverse matrix.
  *
- *  This class has the support to carry out matrix operations
- *  ## message to self though this class is not thoroughly commented I think I have made it workable.
+ *                  |   A[1][1]     A[1][2]     A[1][3]    |                |   matrix[0][0]   matrix[0][1]   matrix[0][2]  |
+ *                  |   A[2][1]     A[2][2]     A[2][3]    |    --->>       |   matrix[1][0]   matrix[1][1]   matrix[1][2]  |
+ *                  |   A[3][1]     A[3][2]     A[3][3]    |                |   matrix[2][0]   matrix[2][1]   matrix[2][2]  |
+ *
+ *  The above depiction is a mapping to the elements of the 3X3 Matrix.
+ *
+ *  CONSTRUCTORS
+ *  This class has the following constructors
+ *      ->{constructor} InverseMatrix(double[][] x); || is used to initialize matrix.
+ *
+ *  METHODS
+ *  This class has the following methods
+ *      ->
+ *
+ *
+ *  MATRIX OPERATIONS
+ *      ->
+ *
+ *      ## message to self though this class is not thoroughly commented I think I have made it workable.
+ *      ## this class commenting is in progress
  *
  */
 
+package com.example.matrixmathinjavaapplication;
+
+import java.text.DecimalFormat;
 
 public class InverseMatrix extends Matrix {
 
     InverseMatrix(double[][] x){
         super.matrix = x ;
-    }
-    DecimalFormat numberFormat = new DecimalFormat("#.00");
+    } // constructor InverseMatrix(double[][]) ends here
+    DecimalFormat numberFormat = new DecimalFormat("#.00"); // used to format the matrix after the operations.
 
-    double[][] inverseMatrix = new double[3][3] ;
+    double[][] inverseMatrix = new double[3][3] ; // used to store the inverse matrix.
 
-    static double[][] UNITMATRIX = {
+    static double[][] UNITMATRIX = { // this is the static Unit matrix
                                       { 1 , 0 , 0 } ,
                                       { 0 , 1 , 0 } ,
                                       { 0 , 0 , 1 } } ;
 
-    static double[][] ERRORMATRIX = {
+    static double[][] ERRORMATRIX = { // this is the double ERRORMATRIX and this is used to represent the errors.
                                       { 1 , 0 , 1 } ,
                                       { 1 , 0 , 1 } ,
                                       { 1 , 0 , 1 } } ;
 
         public double[][] main() {
-            for (int i = 0 ; i < 3 ; i++) {
-                for (int j = 0; j < 3; j++) {
-                    inverseMatrix[i][j] = ( i==j ? 1 : 0 );
-                }
-            }
+
+            inverseMatrix = UNITMATRIX; // used to initialize the inverse matrix so that I can perform the algorithm.
+
 
         // createMatrix();   // This was used in command line to get the matrix.
         // printMatrix(matrix , true); // This was used in command line to print the input matrix.
