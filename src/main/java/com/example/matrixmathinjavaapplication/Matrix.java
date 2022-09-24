@@ -38,6 +38,8 @@
  *      -> void rowMultiplication(double[] a,double x); || this method is row multiplication operation.
  *      -> double[][] transpose();  || this method is used to find and return 3X3 transpose matrix.
  *
+ *    ##  "-> commented code" means that it is useful code but as not presently required it is commented.
+ *
  */
 
 package com.example.matrixmathinjavaapplication;
