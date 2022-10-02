@@ -7,7 +7,10 @@
  *          step 1: add extra requirements to the fxml file of InverseMatrixApplication. DONE
  *          step 2: test for one operation of multiplication, the chosen operation is row multiplication. DONE
  *
- *              > The Determinant button doesn't work as expected.
+ *              > The work of row-multiplication function is on going
+ *              ## I am getting confused between the implementation of fxml changes or functional changes and
+ *              ## I would suggest to first add a component in the fxml so that the choice of performing the
+ *              ## matrix operation will dictate how the application will look like.
  *
  *          step 3: add the rest of the elements to the fxml file and add proper methods and finish. working
  */
@@ -138,6 +141,28 @@ public class ControllerUDOApplication {
 
     }
 
+//    public void OnRowMultiplyButtonPress(ActionEvent event){
+//        try {
+//            double[][] controllerUDOMatrixD = new double[][]{
+//                    {Double.parseDouble(a11.getText()), Double.parseDouble(a12.getText()), Double.parseDouble(a13.getText())},
+//                    {Double.parseDouble(a21.getText()), Double.parseDouble(a22.getText()), Double.parseDouble(a23.getText())},
+//                    {Double.parseDouble(a31.getText()), Double.parseDouble(a32.getText()), Double.parseDouble(a33.getText())}
+//            };
+//
+//            Matrix controllerUDOMatrixDObject = new Matrix(controllerUDOMatrixD);
+//
+//            var inputMulVar = Double.parseDouble(inputVar.getText());
+//            var inputRowVar = Integer.parseInt(inputRow1.getText());
+//
+//            controllerUDOMatrixDObject.rowAddition();
+//
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//
+//
+//    }
+
 
     public void OnDeterminantButtonPress(){
         try {
@@ -149,7 +174,7 @@ public class ControllerUDOApplication {
 
             Matrix controllerUDOMatrixDObject = new Matrix(controllerUDOMatrixD);
 
-            DeterminantPrompt.setText( "The determinant of the given matrix is " + controllerUDOMatrixDObject.determinantOfMatrix);
+            DeterminantPrompt.setText( "The determinant of the given matrix is " + controllerUDOMatrixDObject.getDeterminantOfMatrix(controllerUDOMatrixDObject.matrix));
 
         }catch (Exception exception){
             exception.printStackTrace();

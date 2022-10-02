@@ -34,7 +34,7 @@ TO DO:-
  >> make equalsTo() in Matrix for "Matrix matrix" and "float[][] x". <<<////
  >> put all the matrix operations into Matrix, from InverseMatrix. <<<////
  >> test the changes. {during testing I came across the problem of decimal in points} <<<////
- >> Add a smooth GUI. <<<////  ## make the GUI a bit modern
+ >> Add a smooth GUI. <<<////  ## make the GUI a bit modern  ^^ commented every thing up until here
 
 
 
@@ -43,6 +43,7 @@ TO DO:-
         --> Working.
 
         > Tried to add a css to the project, but it did not work.
+        >>> I dont like the sloppy way of doing this project so tomorrow I will do a revamp.
 
  >> make the GUI a bit modern
  >> add class to calculate inverse matrix from adjoin of matrix.

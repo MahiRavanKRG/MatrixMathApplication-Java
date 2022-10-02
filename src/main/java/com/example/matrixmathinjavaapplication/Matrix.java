@@ -11,7 +11,7 @@
  *  CONSTRUCTORS
  *  This class has the following constructors
  *      ->{constructor} Matrix(); || is used for unit matrix.
- *      ->{constructor} Matrix(true);  || boolean is just for the purpose of segregation, true\false doesn't matter.
+ *      ->{constructor} Matrix(true);  || boolean is just for the purpose of segregation, true\false doesn't matter.+
  *                                     || this is used for user initialization of the matrix.
  *      ->{constructor} Matrix(double[][] ); || is used to copy the inserted matrix.
  *
@@ -46,8 +46,7 @@ package com.example.matrixmathinjavaapplication;
 
 import java.util.Scanner;
 
-public class Matrix {
-
+public class Matrix { 
     Matrix(double[][] matrix) {  // initializes the matrix using the given input.
         this.matrix = matrix;
     } // constructor Matrix( double[][] ) ends here
