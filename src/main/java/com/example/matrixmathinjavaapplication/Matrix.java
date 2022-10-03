@@ -11,7 +11,7 @@
  *  CONSTRUCTORS
  *  This class has the following constructors
  *      ->{constructor} Matrix(); || is used for unit matrix.
- *      ->{constructor} Matrix(true);  || boolean is just for the purpose of segregation, true\false doesn't matter.
+ *      ->{constructor} Matrix(true);  || boolean is just for the purpose of segregation, true\false doesn't matter.+
  *                                     || this is used for user initialization of the matrix.
  *      ->{constructor} Matrix(double[][] ); || is used to copy the inserted matrix.
  *
@@ -38,24 +38,18 @@
  *      -> void rowMultiplication(double[] a,double x); || this method is row multiplication operation.
  *      -> double[][] transpose();  || this method is used to find and return 3X3 transpose matrix.
  *
+ *    ##  "-> commented code" means that it is useful code but as not presently required it is commented.
+ *
  */
 
 package com.example.matrixmathinjavaapplication;
 
 import java.util.Scanner;
 
-public class Matrix {
-
-    Matrix(double[][] matrix) {
+public class Matrix { 
+    Matrix(double[][] matrix) {  // initializes the matrix using the given input.
         this.matrix = matrix;
-    }
-
-
-    double[][] matrix = new double[3][3] ;
-    double determinantOfMatrix , x = 0 ;
-
-    Scanner scan = new  Scanner(System.in);
-
+    } // constructor Matrix( double[][] ) ends here
 
     Matrix(){  // used for initialization of unit matrix
         for (int i = 0; i < 3; i++) {
@@ -65,7 +59,15 @@ public class Matrix {
         }
     } // constructor Matrix() ends here
 
-    Matrix(boolean fakeVariable){  // used for initialization of user dictated matrix
+
+    double[][] matrix = new double[3][3] ;  // the matrix.
+    double determinantOfMatrix , x = 0 ;  // stores the determinant.
+
+    Scanner scan = new  Scanner(System.in);  // the only scanner of this class.
+
+
+
+    Matrix(boolean fakeVariable){  // used for initialization of user dictated matrix.
 
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
@@ -75,7 +77,7 @@ public class Matrix {
             }
     } // constructor Matrix(boolean p) ends here
 
-    void createMatrix(){  // used for initialization of user dictated matrix / this is a method and can be used whenever needed
+    void createMatrix(){  // used for initialization of user dictated matrix / this is a method and can be used whenever needed.
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 System.out.print("A[" + i + "][" + j + "] = " );
@@ -85,14 +87,14 @@ public class Matrix {
     } // method createMatrix() ends here
 
 
-    public void printMatrix(Matrix a , boolean b) {  // used to print the input matrix, this is first overloaded form / it has two overloaded forms
+    public void printMatrix(Matrix a , boolean b) {  // used to print the input matrix, this is FIRST overloaded form / it has two overloaded forms
         // this method has two parameters Matrix object and a boolean
         // Matrix object is what is to be printed and boolean is say whether the input is matrix(true) or inverse matrix(false)
-        // boolean was used do that sout is not required to write for message before printing the matrix
+        // boolean was used do that sout is not required to write for message before printing the matrix.
         if (b) System.out.println("The matrix is ");
         else System.out.println("The Inverse matrix is");
 
-        for ( double[] x : a.matrix ) { // for each is implemented to print the matrix
+        for ( double[] x : a.matrix ) { // for each is implemented to print the matrix.
             System.out.println();
             for ( double y : x ) {
                 System.out.print("\t\t\t"  + y );
@@ -100,17 +102,17 @@ public class Matrix {
 
         }
         System.out.println();
-    } // method printMatrix(Matrix a , boolean b) ends here / first overload
+    } // method printMatrix(Matrix a , boolean b) ends here / FIRST overload
 
-    public void printMatrix(double[][] a , boolean b) { // used to print the input matrix, this is second overloaded form
+    public void printMatrix(double[][] a , boolean b) { // used to print the input matrix, this is SECOND overloaded form
         // this method has two parameters 2D matrix array and a boolean
         // 2D matrix array is what is to be printed, this gives flexibility to this method and printMatrix() can also be used to print 2D arrays
         // boolean is say whether the input is matrix(true) or inverse matrix(false)
-        // boolean was used do that sout is not required to write for message before printing the matrix
+        // boolean was used do that sout is not required to write for message before printing the matrix.
         if (b) System.out.println("The matrix is ");
         else System.out.println("The Inverse matrix is");
 
-        for ( double[] x : a ) { // for each is implemented to print the matrix
+        for ( double[] x : a ) { // for each is implemented to print the matrix.
             System.out.println();
             for ( double y : x ) {
                 System.out.print("\t\t\t"  + y );
@@ -118,25 +120,25 @@ public class Matrix {
 
         }
         System.out.println();
-    } // method printMatrix(double[][] a , boolean b) ends here / second overload
+    } // method printMatrix(double[][] a , boolean b) ends here / SECOND overload
 
 
-    double[][] transpose(){ // this method is used to create a transpose of the given matrix and return it as a 2D array matrix
+    double[][] transpose(){ // this method is used to create a transpose of the given matrix and return it as a 2D array matrix.
         double[][] matrixTranspose = new double[3][3];
         for (int i=0 ; i<3 ; i++){
             for (int j = 0; j < 3; j++) {
                 matrixTranspose[i][j] =  matrix[j][i] ;
             }
         }
-        System.out.print("Transpose ");
-        printMatrix( matrixTranspose , true );
+//        System.out.print("Transpose ");  // this can be used to print this matrix on the console. --> commented code
+//        printMatrix( matrixTranspose , true );                                                    --> commented code
 
         return matrixTranspose;
     } // method transpose() ends here
 
 
 
-    void initialize(){  // this is used to test the code it gives some values and initializes the matrix for use
+    void initializeExOneToNine(){  // this is used to test the code it gives some values and initializes the matrix for use
         double k = 0 ;   // this is supposed to be temporary
         for (int i=0 ; i<3 ; i++){
             for (int j = 0; j < 3; j++) {
@@ -150,13 +152,13 @@ public class Matrix {
 
 
 
-    boolean equalsTo(Matrix x){
+    boolean equalsTo(Matrix x){  // used to check for the equality of matrix. / it has two overloaded forms
         return (matrix == x.matrix);
-    } // method equalsTo() ends here
+    } // method equalsTo() ends here / FIRST overload
 
-    boolean equalsTo(double[][] x){
+    boolean equalsTo(double[][] x){  // used to check for the equality of matrix. / it has two overloaded forms
         return (matrix == x);
-    } // method equalsTo() ends here
+    } // method equalsTo() ends here / SECOND overload
 
 
 
@@ -166,7 +168,7 @@ public class Matrix {
         c=(( r[0][2] * r[1][1] * r[2][0] ) + ( r[0][1] * r[1][0] * r[2][2] ) + ( r[0][0] * r[1][2] * r[2][1] ));
 
         return (b-c);
-    }
+    } // method getDeterminantOfMatrix(double[][]) ends here
 
 
     public void rowInterchange(double[] a,double[] b){     // This method performs row interchange.
@@ -186,21 +188,22 @@ public class Matrix {
         g=a[2];
         a[2]=b[2];
         b[2]=g;
-    }
+    } // method rowInterchange(double[],double[]) ends here
 
 
     public void rowAddition(double[] a, double[] b, double x){ // this method performs matrix row addition.
+        //  HERE A IS TARGET AND B IS ADDITION ROW.+
         a[0]+=(x*b[0]);
         a[1]+=(x*b[1]);
         a[2]+=(x*b[2]);
-    }
+    } // method rowAddition(double[], double[], double) ends here
 
 
     public void rowMultiplication(double[] a,double x){  // This method performs matrix row multiplication.
         a[0]*=x;
         a[1]*=x;
         a[2]*=x;
-    }
+    } // method rowMultiplication(double[],double) ends here
 
 
     public double[][] getMatrix() {

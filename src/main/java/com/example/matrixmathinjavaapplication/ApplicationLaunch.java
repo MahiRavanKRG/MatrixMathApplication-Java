@@ -4,6 +4,13 @@
  *
  *      Here the application has only one start point and if you want
  *       a new application then you have to change the FXMLLoader.
+ *
+ *       ## So here are some of my notes to the user of this program
+ *       ## I have made the applications as separate pieces of codes, any one application has 3 parts
+ *            1. GUI which you can find as .fxml file
+ *            2. Controller, the fxml file only has GUI and no functionality or code, the Controller file carries the code and the functions of any application
+ *            3. Finally, you need to execute it in order for it to run, this can be done in this class
+ *       #W So whoever you are look into what you need to change nad focus on that particular file.
  */
 
 
@@ -26,9 +33,11 @@ public class ApplicationLaunch extends Application {
 
         Image logo = new Image("D:\\CODES\\Java\\MatrixMathInJavaApplication\\src\\Images\\MainLogo.png");
         primaryStage.getIcons().add(logo);
+        // this is used to add logo
 
         String bootstrapCSSfileAddress = getClass().getResource("bootstrap.css").toExternalForm();
         sceneX.getStylesheets().add(bootstrapCSSfileAddress);
+        // This is used to add CSS
 
 
         primaryStage.setTitle("ApplicationX");
