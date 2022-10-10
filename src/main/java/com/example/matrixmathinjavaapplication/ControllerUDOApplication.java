@@ -7,10 +7,10 @@
  *          step 1: add extra requirements to the fxml file of InverseMatrixApplication. DONE
  *          step 2: test for one operation of multiplication, the chosen operation is row multiplication. DONE
  *
- *              > The work of row-multiplication function is on going
- *              ## I am getting confused between the implementation of fxml changes or functional changes and
- *              ## I would suggest to first add a component in the fxml so that the choice of performing the
- *              ## matrix operation will dictate how the application will look like.
+ *              > The work of row-addition function is going on
+ *              ## I made the application GUI
+ *              ## Next step is to fix and add the application logic.
+ *              ## the back end (Core logic is already ready)
  *
  *          step 3: add the rest of the elements to the fxml file and add proper methods and finish. working
  */
@@ -31,16 +31,17 @@ public class ControllerUDOApplication {
     @FXML
     private TextField a11 , a12 , a13 , a21 , a22 , a23 , a31 , a32 , a33;
     @FXML
-    private TextField inputRow1 , inputRow2 , inputVar;
+    private TextField inputRowM1 , inputRowM2 , inputVarM , inputRowA1 , inputRowA2 , inputRowA3 , inputVarA;
 
     @FXML
-    private Button Calculate , Determinant;
+    private Button RowMultiplicationButton , RowAdditionButton , Determinant;
 
     public void OnRowMultiplicationButtonPress(){
         // now this will serve as the working logic of row multiplication
         try {
 
-            if(inputRow1.getText()!=inputRow2.getText()) inputRow2.setText(inputRow1.getText()); ;
+            if(inputRowM1.getText()!=inputRowM2.getText()) inputRowM2.setText(inputRowM1.getText());
+            RowAdditionButton.setDisable(true);
 
 
             double[][] controllerUDOMatrixC = new double[][]{
@@ -49,8 +50,8 @@ public class ControllerUDOApplication {
                     {Double.parseDouble(a31.getText()), Double.parseDouble(a32.getText()), Double.parseDouble(a33.getText())}
             };
 
-            var inputMulVar = Double.parseDouble(inputVar.getText());
-            var inputRowVar = Integer.parseInt(inputRow1.getText());
+            var inputMulVar = Double.parseDouble(inputVarM.getText());
+            var inputRowVar = Integer.parseInt(inputRowM1.getText());
 
             Matrix controllerUDOMatrixObject = new Matrix(controllerUDOMatrixC);
 
@@ -92,7 +93,8 @@ public class ControllerUDOApplication {
                 // This is a work in progress.
         try {
 
-            if(inputRow1.getText()!=inputRow2.getText()) inputRow2.setText(inputRow1.getText()); ;
+            if(inputRowA1.getText()!=inputRowA2.getText()) inputRowA2.setText(inputRowA1.getText()); ;
+            RowMultiplicationButton.setDisable(true);
 
 
             double[][] controllerUDOMatrixC = new double[][]{
@@ -101,8 +103,9 @@ public class ControllerUDOApplication {
                     {Double.parseDouble(a31.getText()), Double.parseDouble(a32.getText()), Double.parseDouble(a33.getText())}
             };
 
-            var inputMulVar = Double.parseDouble(inputVar.getText());
-            var inputRowVar = Integer.parseInt(inputRow1.getText());
+            var inputAddVar = Double.parseDouble(inputVarA.getText());
+            var inputRowOneVar = Integer.parseInt(inputRowA1.getText());
+            var inputRowTwoVar = Integer.parseInt(inputRowA3.getText());
 
             Matrix controllerUDOMatrixObject = new Matrix(controllerUDOMatrixC);
 
@@ -110,9 +113,10 @@ public class ControllerUDOApplication {
 
             DeterminantPrompt.setText(".");
 
-            if (-1<inputRowVar && inputRowVar<4){
-                int targetRow = inputRowVar - 1;
-                controllerUDOMatrixObject.rowAddition(controllerUDOMatrixObject.matrix[targetRow], controllerUDOMatrixObject.matrix[1] , inputMulVar );
+            if (-1<inputRowOneVar && inputRowOneVar<4){
+                int targetRow = inputRowOneVar - 1;
+                int adderRow = inputRowTwoVar - 1;
+                controllerUDOMatrixObject.rowAddition(controllerUDOMatrixObject.matrix[targetRow], controllerUDOMatrixObject.matrix[adderRow] , inputAddVar );
 
                 if (targetRow==0){
                     a11.setText(String.valueOf(controllerUDOMatrixObject.matrix[targetRow][0]));
@@ -182,7 +186,13 @@ public class ControllerUDOApplication {
 
     }
 
-    public void OninputRow1Leave(){
-        inputRow2.setText(inputRow1.getText());
+    public void OninputRowMLeave(){
+        inputRowM2.setText(inputRowM1.getText());
     }
+    public void OninputRowALeave(){
+        inputRowA2.setText(inputRowA1.getText());
+    }
+
+    public void OnMultiplicationRadioSelect(){ RowAdditionButton.setDisable(true); RowMultiplicationButton.setDisable(false); }
+    public void OnAdditionRadioSelect(){ RowMultiplicationButton.setDisable(true); RowAdditionButton.setDisable(false);}
 }

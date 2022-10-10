@@ -4,13 +4,15 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <!-- MainPannelController-->
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: BISQUE;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.matrixmathinjavaapplication.ControllerUDOApplication">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: BISQUE;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.matrixmathinjavaapplication.ControllerUDOApplication">
     <children>
         <TextField fx:id="a11" layoutX="14.0" layoutY="58.0" promptText="A[1][1]" text="11" />
         <TextField fx:id="a12" layoutX="225.0" layoutY="58.0" promptText="A[1][2]" text="12" />
@@ -21,12 +23,12 @@
         <TextField fx:id="a31" layoutX="14.0" layoutY="146.0" promptText="A[3][1]" text="31" />
         <TextField fx:id="a32" layoutX="225.0" layoutY="146.0" promptText="A[3][2]" text="32" />
         <TextField fx:id="a33" layoutX="436.0" layoutY="146.0" promptText="A[3][3]" text="33" />
-        <Button fx:id="CALCULATE" layoutX="88.0" layoutY="299.0" mnemonicParsing="false" onAction="#OnRowMultiplicationButtonPress" prefHeight="50.0" prefWidth="150.0" text="Row Multiplication">
+        <Button fx:id="RowMultiplicationButton" layoutX="48.0" layoutY="400.0" mnemonicParsing="false" onAction="#OnRowMultiplicationButtonPress" prefHeight="50.0" prefWidth="150.0" text="Row Multiplication">
             <font>
                 <Font size="14.0" />
             </font>
         </Button>
-        <Button fx:id="DETERMINANT" layoutX="383.0" layoutY="299.0" mnemonicParsing="false" onAction="#OnDeterminantButtonPress" prefHeight="50.0" prefWidth="106.0" text="Determinant">
+        <Button fx:id="DeterminantButton" layoutX="436.0" layoutY="400.0" mnemonicParsing="false" onAction="#OnDeterminantButtonPress" prefHeight="50.0" prefWidth="106.0" text="Determinant">
             <font>
                 <Font size="14.0" />
             </font>
@@ -41,9 +43,9 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="10.0" layoutY="211.0" prefHeight="65.0" prefWidth="576.0" style="-fx-border-color: BLACK;">
+      <AnchorPane fx:id="MultiplicationAnchor" layoutX="10.0" layoutY="211.0" prefHeight="65.0" prefWidth="576.0" style="-fx-border-color: BLACK;">
          <children>
-            <TextField fx:id="inputRow1" layoutX="37.0" layoutY="17.0" onMouseExited="#OninputRow1Leave" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
+            <TextField fx:id="inputRowM1" layoutX="37.0" layoutY="17.0" onMouseExited="#OninputRowMLeave" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
             <Label layoutX="8.0" layoutY="19.0" text="R">
                <font>
                   <Font size="15.0" />
@@ -59,9 +61,52 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="inputVar" layoutX="184.0" layoutY="17.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
-            <TextField fx:id="inputRow2" layoutX="295.0" layoutY="17.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
+            <TextField fx:id="inputVarM" layoutX="184.0" layoutY="17.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
+            <TextField fx:id="inputRowM2" layoutX="295.0" layoutY="17.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
+            <RadioButton fx:id="radioButton" layoutX="474.0" layoutY="24.0" mnemonicParsing="false" onAction="#OnMultiplicationRadioSelect" text="Multiply row">
+               <toggleGroup>
+                  <ToggleGroup fx:id="operation" />
+               </toggleGroup></RadioButton>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="AdditionAnchor" layoutX="10.0" layoutY="295.0" prefHeight="65.0" prefWidth="576.0" style="-fx-border-color: BLACK;">
+         <children>
+            <TextField fx:id="inputRowA1" layoutX="37.0" layoutY="17.0" onMouseExited="#OninputRowALeave" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
+            <Label layoutX="8.0" layoutY="20.0" text="R">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="20.0" text="--&gt;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="166.0" layoutY="20.0" text="R">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inputVarA" layoutX="288.0" layoutY="19.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
+            <TextField fx:id="inputRowA2" layoutX="190.0" layoutY="20.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
+            <Label layoutX="355.0" layoutY="19.0" text="R">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inputRowA3" layoutX="381.0" layoutY="19.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
+            <Label layoutX="259.0" layoutY="19.0" text="+">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="radioButton" layoutX="474.0" layoutY="21.0" mnemonicParsing="false" onAction="#OnAdditionRadioSelect" text="Row add" toggleGroup="$operation" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="RowAdditionButton" layoutX="238.0" layoutY="400.0" mnemonicParsing="false" onAction="#OnRowAdditionButtonPress" prefHeight="50.0" prefWidth="150.0" text="Row Addition">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
