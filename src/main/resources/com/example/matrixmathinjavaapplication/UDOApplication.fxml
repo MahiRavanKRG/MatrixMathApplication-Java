@@ -12,7 +12,7 @@
 
 <!-- MainPannelController-->
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: BISQUE;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.matrixmathinjavaapplication.ControllerUDOApplication">
+<AnchorPane fx:id="myApp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.matrixmathinjavaapplication.ControllerUDOApplication">
     <children>
         <TextField fx:id="a11" layoutX="14.0" layoutY="58.0" promptText="A[1][1]" text="11" />
         <TextField fx:id="a12" layoutX="225.0" layoutY="58.0" promptText="A[1][2]" text="12" />
@@ -63,7 +63,7 @@
             </Label>
             <TextField fx:id="inputVarM" layoutX="184.0" layoutY="17.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
             <TextField fx:id="inputRowM2" layoutX="295.0" layoutY="17.0" prefHeight="26.0" prefWidth="54.0" promptText="A[1][1]" text="1" />
-            <RadioButton fx:id="radioButton" layoutX="474.0" layoutY="24.0" mnemonicParsing="false" onAction="#OnMultiplicationRadioSelect" text="Multiply row">
+            <RadioButton fx:id="radioButton1" layoutX="474.0" layoutY="24.0" mnemonicParsing="false" onAction="#OnMultiplicationRadioSelect" text="Multiply row">
                <toggleGroup>
                   <ToggleGroup fx:id="operation" />
                </toggleGroup></RadioButton>
@@ -100,7 +100,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <RadioButton fx:id="radioButton" layoutX="474.0" layoutY="21.0" mnemonicParsing="false" onAction="#OnAdditionRadioSelect" text="Row add" toggleGroup="$operation" />
+            <RadioButton fx:id="radioButton2" layoutX="474.0" layoutY="21.0" mnemonicParsing="false" onAction="#OnAdditionRadioSelect" text="Row add" toggleGroup="$operation" />
          </children>
       </AnchorPane>
       <Button fx:id="RowAdditionButton" layoutX="238.0" layoutY="400.0" mnemonicParsing="false" onAction="#OnRowAdditionButtonPress" prefHeight="50.0" prefWidth="150.0" text="Row Addition">
