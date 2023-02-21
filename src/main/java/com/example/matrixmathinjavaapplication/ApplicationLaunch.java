@@ -13,7 +13,7 @@
  *       #W So whoever you are look into what you need to change nad focus on that particular file.
  */
 
-/*   This is simple git commit
+/*   This is simple git commit with push
 * */
 package com.example.matrixmathinjavaapplication;
 
