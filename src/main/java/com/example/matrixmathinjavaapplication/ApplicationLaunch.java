@@ -13,7 +13,9 @@
  *       #W So whoever you are look into what you need to change nad focus on that particular file.
  */
 
-
+/*   This is simple git commit with push
+        another commit test
+* */
 package com.example.matrixmathinjavaapplication;
 
 import javafx.application.Application;
@@ -25,19 +27,17 @@ import javafx.stage.Stage;
 public class ApplicationLaunch extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("UDOApplication.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("InverseMatrixApplication.fxml"));
 
         Scene sceneX = new Scene(fxmlLoader.load());
-
-
 
         Image logo = new Image("D:\\CODES\\Java\\MatrixMathInJavaApplication\\src\\Images\\MainLogo.png");
         primaryStage.getIcons().add(logo);
         // this is used to add logo
 
-        String bootstrapCSSfileAddress = getClass().getResource("bootstrap.css").toExternalForm();
-        sceneX.getStylesheets().add(bootstrapCSSfileAddress);
-        // This is used to add CSS
+//        String styleCSSfileAddress = getClass().getResource("style.css").toExternalForm();
+//        sceneX.getStylesheets().add(styleCSSfileAddress);
+//        // This is used to add CSS
 
 
         primaryStage.setTitle("ApplicationX");

@@ -42,9 +42,10 @@ TO DO:-
         .
         --> Working.
 
-        > Tried to add a css to the project, but it did not work.
-        >>> I dont like the sloppy way of doing this project so tomorrow I will do a revamp.
+        >Uttam: Add CSS to the project
+        >Aaditya: Test the newly made classes.
 
+ >> Add functionality to see the step wise process of how the InverseMatrix found out the inverse matrix.
  >> make the GUI a bit modern
  >> add class to calculate inverse matrix from adjoin of matrix.
  >> add a new class to perform matrix multiplication.

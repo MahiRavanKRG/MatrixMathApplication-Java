@@ -82,6 +82,7 @@ public class ControllerInverseMatrixApplication {
             a31.setText(String.valueOf(controllerXResult[2][0]));
             a32.setText(String.valueOf(controllerXResult[2][1]));
             a33.setText(String.valueOf(controllerXResult[2][2]));
+
        } catch (Exception e){
 
            heading.setText("Please Enter Some Value");
